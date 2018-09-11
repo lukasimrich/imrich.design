@@ -1,0 +1,11 @@
+.Hero a {
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    color: #070b19;
+    /* position: relative; */
+  }
+  
+  .Hero a svg {
+    margin: -4px 16px -4px 0;
+  }

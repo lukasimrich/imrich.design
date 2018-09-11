@@ -1,0 +1,39 @@
+.Address h1 {
+  color: white;
+  margin-top: 0;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 34px;
+  }
+}
+
+
+
+.Address p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+.Address ul {
+  list-style: none;
+  padding: 0 0 0 0;
+}
+
+.Address li {
+  padding: 8px 0 8px 0;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.Address li svg {
+  margin: 0 8px 0 0;
+}
+
+.Address a {
+  color: white;
+  text-decoration: none;
+}

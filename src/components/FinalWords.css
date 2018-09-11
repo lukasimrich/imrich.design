@@ -1,0 +1,37 @@
+.Thanks {
+  margin: 160px 0 0 0;
+}
+
+@media (max-width: 500px) {
+  .Thanks {
+    margin: 48px 0 0 0;
+  }
+}
+
+.Thanks svg {
+  margin: 0 8px 0 0;
+}
+
+.Credits {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 16px;
+}
+
+.Credits svg:nth-child(1) {
+  margin: -2px 8px -2px 0;
+}
+
+.Credits svg:nth-child(n + 2) {
+  margin: -2px 8px -2px 8px;
+}
+
+.FinalWords a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.FinalWords p {
+  line-height: 2;
+  font-weight: 500;
+}
