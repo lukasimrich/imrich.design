@@ -40,7 +40,7 @@ const GrabAttention = props => (
   <div>
     <WowLine>I can help you with
     <br className="Hide MobileShow"/>
-    <TextLoop speed={3000}>
+    <TextLoop speed={2000}>
       {staticdata.keywords.map(keyword => <WowKeyword>#{keyword}</WowKeyword>)}
     </TextLoop>
     </WowLine>
