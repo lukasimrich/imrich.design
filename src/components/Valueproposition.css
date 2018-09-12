@@ -1,0 +1,63 @@
+.WowKeyword {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.3;
+  color: transparent;
+  -webkit-background-clip: text; /* Seems we can't rely on autoprefixer for this */
+  background-clip: text;
+  position: relative;
+  background-image: linear-gradient(30deg, #fee140, #fa709a);
+  margin: 0;
+  padding-left: 24px;
+}
+
+/* @media (max-width: 1050px) {
+  padding-left: 0px;
+}
+@media (max-width: 600px) {
+  font-size: 34px;
+  display: block;
+} */
+
+.Wowline {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0;
+}
+/* @media (max-width: 1050px) {
+  max-width: 520px;
+}
+@media (max-width: 600px) {
+  font-size: 34px;
+} */
+
+.KeywordsGroup {
+  margin: 32px 0 96px 0;
+  max-width: 840px;
+}
+
+@media (max-width: 500px) {
+  .KeywordsGroup {
+    margin: 32px 0 32px 0;
+  }
+}
+
+.KeywordContainer {
+  font-size: 16px;
+  font-weight: 400;
+  color: #90939b;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0 16px 16px 0;
+  margin: 0;
+}
+
+p.KeywordContainer:hover {
+  cursor: pointer;
+  color: transparent;
+  -webkit-background-clip: text; /* Seems we can't rely on autoprefixer for this */
+  background-clip: text;
+
+  background-image: linear-gradient(30deg, #fee140, #fa709a);
+}

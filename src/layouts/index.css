@@ -44,15 +44,19 @@ h1 {
 
 .Footer {
   padding: 224px 48px 48px 48px;
-  background: #070b19;
+  background: rgba(255,255,255,0);
   color: rgba(255, 255, 255, 0.6);
+  transition: all 0.15s ease-in;
+
+}
+
+.FooterScrolled {
+  background: #070b19;
 }
 
 @media (max-width: 500px) {
   .Footer {
     padding: 80px 32px 32px 32px;
-    background: #070b19;
-    color: rgba(255, 255, 255, 0.6);
   }
 }
 
@@ -86,6 +90,11 @@ h1 {
 .Hide {
   display: none;
 }
+
+.Show {
+  display: inline-block;
+}
+
 
 @media (max-width: 500px) {
   .MobileShow {

@@ -1,50 +1,61 @@
 import React from 'react'
 import styled from 'styled-components'
-import TextLoop from 'react-text-loop'
+
+import './Valueproposition.css'
+import TextLoop from '../components/TextLoop'
 import staticdata from '../../staticdata.json'
 
-const WowKeyword = styled.h1`
-  font-size: 48px;
-  font-weight: 900;
-  line-height: 1.4;
-  color: transparent;
-  -webkit-background-clip: text; /* Seems we can't rely on autoprefixer for this */
-  background-clip: text;
-  position: relative;
-  background-image: linear-gradient(30deg, #fee140, #fa709a);
-  display: inline-block;
-  margin: 0;
-  padding-left: 24px;
-  @media (max-width: 1050px) {
-    padding-left: 0px;
-  }
-  @media (max-width: 600px) {
-    font-size: 34px;
-    display: block;
 
-  }
-`
 
-const WowLine = styled.h1`
-  ${'' /* display: inline-block;  */} font-size: 48px;
-  font-weight: 900;
-  @media (max-width: 1050px) {
-    max-width: 520px;
+class GrabAttention extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      hoverKeyword: 'nieje',
+      hasHovered: false,
+    }
   }
-  @media (max-width: 600px) {
-    font-size: 34px;
-  }
-`
 
-const GrabAttention = props => (
-  <div>
-    <WowLine>I can help you with
-    <br className="Hide MobileShow"/>
-    <TextLoop speed={2000}>
-      {staticdata.keywords.map(keyword => <WowKeyword>#{keyword}</WowKeyword>)}
-    </TextLoop>
-    </WowLine>
-  </div>
-)
+  handleHoverOn = (keyword, event) => {
+    this.setState({ hoverKeyword: keyword, hasHovered: true })
+  }
+
+  handleHoverOff = () => {
+    this.setState({ hasHovered: false })
+  }
+
+  render() {
+    return (
+      <div>
+        <h1 className="WowLine">
+          I can help you with
+          <br className="Hide MobileShow" />
+          <span className={this.state.hasHovered ? "Show WowKeyword" : "Hide WowKeyword"}>#{this.state.hoverKeyword}</span>
+          <span className={this.state.hasHovered ? "Hide" : "Show"}>
+          <TextLoop 
+            speed={2000}>
+            {staticdata.keywords.map(keyword => (
+              <div className="WowKeyword">#{keyword}</div>
+            ))}
+          </TextLoop>
+          </span>
+        
+        </h1>
+
+        <div className="KeywordsGroup">
+          {staticdata.keywords.map(keyword => (
+            <p
+              className="KeywordContainer"
+              onMouseEnter={e => this.handleHoverOn(keyword, e)}
+              onMouseLeave={this.handleHoverOff}
+            >
+              {keyword}
+            </p>
+          ))}
+        </div>
+      </div>
+    )
+  }
+}
 
 export default GrabAttention
