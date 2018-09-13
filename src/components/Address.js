@@ -1,6 +1,5 @@
 import React from 'react'
 import './Address.css'
-import ScrollableAnchor from 'react-scrollable-anchor'
 
 const LinkedInIcon = () => (
   <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1">
@@ -36,9 +35,7 @@ const MailIcon = () => (
 
 const Address = () => (
   <div className="Address">
-    <ScrollableAnchor id={'letstalk'}>
       <h1>Let’s talk</h1>
-    </ScrollableAnchor>
     <p>
       If you'd like to chat about a project you want help with drop me a message
       at lukas@imrich.design

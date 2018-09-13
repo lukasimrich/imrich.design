@@ -1,23 +1,20 @@
 import React from 'react'
+import ScrollableAnchor from 'react-scrollable-anchor'
+
 
 import logo from '../images/logo.svg'
-
 import ValueProposition from '../components/ValueProposition'
-
 import Brand from '../components/Brand'
-
 import CallToAction from '../components/CallToAction'
 import Address from '../components/Address'
 import FinalWords from '../components/FinalWords'
 
-
-
-class IndexPage  extends React.Component {
+class IndexPage extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       hoeverKeyword: true,
-      hasScrolled: false
+      hasScrolled: false,
     }
   }
 
@@ -25,36 +22,43 @@ class IndexPage  extends React.Component {
     window.addEventListener('scroll', this.handleScroll)
   }
 
-  handleScroll = (event) => {
+  handleScroll = event => {
     const scrollTop = window.pageYOffset
 
     if (scrollTop > 350) {
-      this.setState({ hasScrolled:true})
+      this.setState({ hasScrolled: true })
     } else {
-      this.setState({ hasScrolled: false})
+      this.setState({ hasScrolled: false })
     }
   }
   render() {
     return (
-  <div>
-    <div className="HeroContainer">
-      <section className="Header">
-        <img src={logo} />
-      </section>
-      <section className="Hero">
-        <ValueProposition />
-        <CallToAction />
-      </section>
-    </div>
-    <section className={this.state.hasScrolled ? "Footer FooterScrolled" : "Footer" }>
-      <div className="GridContainer">
-        <Address />
-        <Brand />
+      <div>
+        <div className="HeroContainer">
+          <section className="Header">
+            <img src={logo} />
+          </section>
+          <section className="Hero">
+            <ValueProposition />
+            <CallToAction />
+          </section>
+        </div>
+        <section
+          className={
+            this.state.hasScrolled ? 'Footer FooterScrolled' : 'Footer'
+          }
+        >
+          <ScrollableAnchor id={'letstalk'}>
+            <div className="GridContainer">
+              <Address />
+              <Brand />
+            </div>
+          </ScrollableAnchor>
+          <FinalWords />
+        </section>
       </div>
-      <FinalWords />
-    </section>
-  </div>
-)}
+    )
+  }
 }
 
 export default IndexPage

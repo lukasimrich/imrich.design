@@ -27,7 +27,7 @@ class GrabAttention extends React.Component {
   render() {
     return (
       <div>
-        <h1 className="WowLine">
+        <h1 className="Wowline">
           I can help you with
           <br className="Hide MobileShow" />
           <span className={this.state.hasHovered ? "Show WowKeyword" : "Hide WowKeyword"}>#{this.state.hoverKeyword}</span>

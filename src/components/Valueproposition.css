@@ -11,13 +11,18 @@
   padding-left: 24px;
 }
 
-/* @media (max-width: 1050px) {
-  padding-left: 0px;
+@media (max-width: 1050px) {
+  .WowKeyword {
+    padding-left: 0px;
+    /* display: block; */
+  }
 }
 @media (max-width: 600px) {
-  font-size: 34px;
-  display: block;
-} */
+  .WowKeyword {
+    font-size: 34px;
+    /* display: block; */
+  }
+}
 
 .Wowline {
   font-size: 48px;
@@ -25,12 +30,18 @@
   line-height: 1.2;
   margin: 0;
 }
-/* @media (max-width: 1050px) {
-  max-width: 520px;
+
+@media (max-width: 1050px) {
+  .Wowline {
+    max-width: 520px;
+  }
 }
+
 @media (max-width: 600px) {
-  font-size: 34px;
-} */
+  .Wowline {
+    font-size: 34px;
+  }
+}
 
 .KeywordsGroup {
   margin: 32px 0 96px 0;
